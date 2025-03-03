@@ -38,7 +38,7 @@ public class Pepasm {
         return instructionMap;
     }
 
-    public static void printCompiledInstruction(String line, HashMap<String, String> instructionMap) {
+    public static void printAssembledInstruction(String line, HashMap<String, String> instructionMap) {
         // regex to capture all "words" in a line, ignores whitespace and commas
         String regex = "[^,\\s]+";
         Pattern pattern = Pattern.compile(regex);
@@ -91,7 +91,7 @@ public class Pepasm {
 
             while (scanner.hasNextLine()) {
                 String line = stripCommentFromLine(scanner.nextLine().trim());
-                printCompiledInstruction(line, instructionMap);
+                printAssembledInstruction(line, instructionMap);
             }
 
             scanner.close();
