@@ -12,6 +12,8 @@ public class Pepasm {
         if (Objects.equals(addrModes, "")) {
             map.put(mnemonic, opcode);
         } else {
+            // If there are addressing modes specified, the mnemonic will be added to the map with each addressing mode
+            // immediate addressing mode is a "0", direct is "1". These values are concatenated with the opcode or hex number specified
             if (addrModes.contains("i")) {
                 map.put(mnemonic+"i", opcode + "0");
             }
