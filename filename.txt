@@ -1,1 +1,32 @@
-Hi this is from text file lol
+LDBA 0x004c,i ; Loads "L" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0075,i ; Loads "u" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0063,i ; Loads "c" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0061,i ; Loads "a" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0073,i ; Loads "s" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0020,i ; Loads a space char into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x004c,i ; Loads "L" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x006f,i ; Loads "o" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0077,i ; Loads "w" into the accumulator
+STBA 0xFC16,d
+
+LDBA 0x0065,i ; Loads "e" into the accumulator
+STBA 0xFC16,d
+
+STOP
+.END
