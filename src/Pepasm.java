@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 public class Pepasm {
     public static void addInstToHashMap(HashMap<String, String> map, String mnemonic, String opcode, String addrModes) {
         if (Objects.equals(addrModes, "")) {
+            // handles instructions that do not have an addressing mode (STOP, ASLA, ASRA, etc)
             map.put(mnemonic, opcode);
         } else {
             // If there are addressing modes specified, the mnemonic will be added to the map with each addressing mode
@@ -57,7 +58,7 @@ public class Pepasm {
             String opcode = instructionMap.get(groups.getFirst());
             if (opcode != null) System.out.printf("%s", instructionMap.get(groups.getFirst()));
         } else {
-            // gets the bytes of the hexadecimal notated number (Ex: 0xFC16 -> FC 16)
+            // gets the hex number without the "0x" prefix, with a space in between (Ex: 0xFC16 -> FC 16)
             String operand = groups.get(1)
                     .substring(2,4) + " " + groups.get(1).substring(4);
 
