@@ -31,7 +31,7 @@ public class Pepasm {
         addInstToHashMap(instructionMap, "LDBA", "D", "id");
         addInstToHashMap(instructionMap, "STWA", "E", "d");
         addInstToHashMap(instructionMap, "LDWA", "C", "id");
-        addInstToHashMap(instructionMap, "ANDA", "8", "id");
+        addInstToHashMap(instructionMap, "ADDA", "6", "id");
         addInstToHashMap(instructionMap, "ASLA", "0A", "");
         addInstToHashMap(instructionMap, "ASRA", "0C", "");
         addInstToHashMap(instructionMap, "STOP", "00", "");
@@ -84,8 +84,6 @@ public class Pepasm {
 
     public static void main(String[] args) {
         String filename = args[0];
-        System.out.println(filename);
-
         HashMap<String, String> instructionMap = getInstructionMap();
 
         try {
