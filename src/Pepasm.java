@@ -108,7 +108,7 @@ public class Pepasm {
     }
 
     public static void main(String[] args) {
-        String filename = "code/program4.pep";
+        String filename = args[0];
         initializeInstructionMap();
 
         try {
